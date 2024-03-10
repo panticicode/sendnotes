@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
+use App\Models\Note;
 
 class User extends Authenticatable
 {
@@ -42,4 +43,12 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+    public function notes()
+    {
+        return $this->hasMany(Note::class);
+    }
+    public function publishedNotes(User $user)
+    {
+        return $this->where('user_id', $user->id)->where('is_published', true)->get();
+    }
 }
