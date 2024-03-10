@@ -12,7 +12,7 @@ What should this application do ?
 - Users can't view other people's notes
 - Notes should only be public once sent
 - Notes should be as secure as possible for public-facing notes
-	- Use UUIDs 
+	- Use UUIDs e.g.(d7e65f6d-62fd-4c8e-98d6-07d7a325c60d)
 
 ## What are thing we are learning ?
 
