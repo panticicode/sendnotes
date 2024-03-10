@@ -12,7 +12,8 @@ class Note extends Model
     use HasFactory, HasUuids;
 
     protected $casts = [
-        'send_date' => 'date'
+        'send_date' => 'date',
+        'is_published' => 'boolean'
     ];
 
     protected $guarded = [
